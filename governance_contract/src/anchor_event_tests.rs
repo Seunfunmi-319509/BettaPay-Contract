@@ -34,8 +34,7 @@ fn upsert_anchor_emits_anchor_upserted_event() {
     );
     assert_eq!(Address::from_val(&env, &topics.get(1).unwrap()), asset);
 
-    let (old_anchor, current): (Option<Address>, Address) =
-        FromVal::from_val(&env, &data);
+    let (old_anchor, current): (Option<Address>, Address) = FromVal::from_val(&env, &data);
     assert_eq!(old_anchor, None);
     assert_eq!(current, anchor);
 }
@@ -90,8 +89,7 @@ fn upsert_anchor_update_also_emits_event() {
     assert_eq!(events.len(), prev + 1, "update emits one event");
 
     let (_contract_id, _topics, data) = events.get(prev).unwrap();
-    let (old_anchor, current): (Option<Address>, Address) =
-        FromVal::from_val(&env, &data);
+    let (old_anchor, current): (Option<Address>, Address) = FromVal::from_val(&env, &data);
     assert_eq!(old_anchor, Some(anchor_a));
     assert_eq!(current, anchor_b);
 }
