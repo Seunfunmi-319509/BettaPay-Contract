@@ -1,7 +1,13 @@
 [package]
 name = "governance_contract"
 version = "0.1.0"
-edition = "2021"
+description = "Soroban smart contract for fee configuration, anchor registry, and system parameters on Stellar"
+license.workspace = true
+edition.workspace = true
+repository = "https://github.com/Betta-Pay/BettaPay-Contract"
+readme = "README.md"
+keywords = ["soroban", "stellar", "smart-contract", "governance", "fees"]
+categories = ["cryptography::cryptocurrency", "wasm"]
 
 [lib]
 crate-type = ["cdylib"]
